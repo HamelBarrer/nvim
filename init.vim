@@ -12,7 +12,7 @@ Plug 'preservim/nerdtree' " Menu
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'ryanoasis/vim-devicons' " Iconos
 Plug 'kaicataldo/material.vim', { 'branch': 'main' } " temas
-Plug 'davidhalter/jedi-vim' 
+" Plug 'davidhalter/jedi-vim' 
 
 " Initialize plugin system
 call plug#end()
@@ -45,7 +45,6 @@ colorscheme material
 set number relativenumber
 set laststatus=0
 set smartindent
-set autoindent
 set expandtab
 set smarttab
 set tabstop=4
@@ -75,9 +74,13 @@ if (has('termguicolors'))
 endif
 
 " Configuracion jedi
-let g:jedi#auto_initialization = 0
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#use_tabs_not_buffers = 1
+" let g:loaded_python_provider = 0
+" let g:python3_host_prog = '/usr/bin/python'
+" let g:jedi#completions_enabled = 0
+
+" let g:jedi#auto_initialization = 0
+" let g:jedi#auto_vim_configuration = 0
+" let g:jedi#use_tabs_not_buffers = 1
 
 " Configuracion de coc
 " TextEdit might fail if hidden is not set.

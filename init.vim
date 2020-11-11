@@ -12,7 +12,8 @@ Plug 'preservim/nerdtree' " Menu
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'ryanoasis/vim-devicons' " Iconos
 Plug 'kaicataldo/material.vim', { 'branch': 'main' } " temas
-" Plug 'davidhalter/jedi-vim' 
+Plug 'sheerun/vim-polyglot'
+Plug 'OmniSharp/omnisharp-vim'
 
 " Initialize plugin system
 call plug#end()
@@ -72,16 +73,6 @@ endif
 if (has('termguicolors'))
   set termguicolors
 endif
-
-" Configuracion jedi
-" let g:loaded_python_provider = 0
-" let g:python3_host_prog = '/usr/bin/python'
-" let g:jedi#completions_enabled = 0
-
-" let g:jedi#auto_initialization = 0
-" let g:jedi#auto_vim_configuration = 0
-" let g:jedi#use_tabs_not_buffers = 1
-
 " Configuracion de coc
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -240,3 +231,5 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+map <F3> :call CocAction('format')<CR>
